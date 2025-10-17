@@ -9,6 +9,7 @@
   "gitRemote": "origin",
   "gitRevision": "main",
   "githubPages": true,
-  "projectDocuments": ["./CHANGELOG.md"],
-  "cname": "hooks.js.org"
+  "projectDocuments": ["./CHANGELOG.md", "examples/README.md"],
+  "cname": "hooks.js.org",
+  "exclude": ["src/index.ts", "**/*.test.ts"]
 }

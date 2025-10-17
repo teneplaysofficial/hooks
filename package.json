@@ -59,6 +59,7 @@
     "fmt:check": "prettier --check .",
     "lint": "eslint",
     "lint:fix": "npx eslint --fix",
+    "predocs": "jiti scripts/update-examples-readme.ts",
     "docs": "typedoc"
   },
   "engines": {
@@ -73,6 +74,7 @@
       "yarn lint",
       "yarn fmt"
     ],
+    "examples/use*.md": "yarn predocs",
     "src/use*!(*.test).ts": "yarn prebuild"
   },
   "prettier": {
@@ -146,6 +148,7 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.0",
     "globals": "^16.4.0",
+    "gray-matter": "^4.0.3",
     "husky": "^9.1.7",
     "jest": "^30.2.0",
     "jest-environment-jsdom": "^30.2.0",
