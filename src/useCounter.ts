@@ -106,7 +106,7 @@ export function useCounter({
   min,
   onChange,
   step = 1,
-}: Counter): CounterReturn {
+}: Counter = {}): CounterReturn {
   const clamp = useCallback(
     (value: number) => {
       let v = value;
