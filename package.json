@@ -66,6 +66,8 @@
     "node": ">=22"
   },
   "lint-staged": {
+    "examples/use*.md": "yarn predocs",
+    "src/use*!(*.test).ts": "yarn prebuild",
     "*.{yml,json,md}": [
       "yarn fmt"
     ],
@@ -73,9 +75,7 @@
       "yarn lint:fix",
       "yarn lint",
       "yarn fmt"
-    ],
-    "examples/use*.md": "yarn predocs",
-    "src/use*!(*.test).ts": "yarn prebuild"
+    ]
   },
   "prettier": {
     "semi": true,
