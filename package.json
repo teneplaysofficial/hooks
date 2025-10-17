@@ -1,0 +1,162 @@
+{
+  "name": "@tenedev/hooks",
+  "displayName": "React Hooks",
+  "version": "0.0.0",
+  "description": "React Hooks",
+  "repository": "https://github.com/teneplaysofficial/hooks.git",
+  "homepage": "https://teneplaysofficial.github.io/hooks",
+  "author": "Sriman <136729116+teneplaysofficial@users.noreply.github.com>",
+  "license": "Apache-2.0",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "react-hooks",
+    "custom-hooks",
+    "usehooks",
+    "react-library",
+    "frontend",
+    "web",
+    "typescript",
+    "javascript",
+    "use",
+    "ui",
+    "react-utils",
+    "react-tools",
+    "react-components",
+    "state-management",
+    "react-development"
+  ],
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "scripts": {
+    "prepare": "husky",
+    "test": "jest",
+    "prebuild": "jiti scripts/gen-index.ts",
+    "build": "tsup src/index.ts --format esm,cjs --dts --minify --clean",
+    "pre-commit": "lint-staged",
+    "fmt": "prettier --write",
+    "fmt:check": "prettier --check .",
+    "lint": "eslint",
+    "lint:fix": "npx eslint --fix",
+    "docs": "typedoc"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "lint-staged": {
+    "*.{yml,json,md}": [
+      "yarn fmt"
+    ],
+    "*.ts": [
+      "yarn lint:fix",
+      "yarn lint",
+      "yarn fmt"
+    ],
+    "src/use*!(*.test).ts": "yarn prebuild"
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "printWidth": 100,
+    "trailingComma": "all",
+    "tabWidth": 2
+  },
+  "jest": {
+    "preset": "ts-jest/presets/default-esm",
+    "testEnvironment": "jsdom",
+    "testMatch": [
+      "**/?(*.)+(test).ts?(x)"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx"
+    ],
+    "extensionsToTreatAsEsm": [
+      ".ts"
+    ],
+    "transform": {
+      "^.+\\.ts$": [
+        "ts-jest",
+        {
+          "useESM": true
+        }
+      ]
+    },
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-dom"
+    ]
+  },
+  "release-it": {
+    "npm": {
+      "publishArgs": [
+        "--provenance"
+      ]
+    },
+    "github": {
+      "release": true,
+      "tokenRef": "GITHUB_TOKEN"
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "conventionalcommits",
+        "infile": "CHANGELOG.md"
+      }
+    }
+  },
+  "peerDependencies": {
+    "react": "19.x"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@eslint/compat": "^1.4.0",
+    "@eslint/js": "^9.37.0",
+    "@eslint/json": "^0.13.2",
+    "@eslint/markdown": "^7.4.0",
+    "@release-it/conventional-changelog": "^10.0.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/react-hooks": "^8.0.1",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.8.0",
+    "@types/react": "^19.2.2",
+    "eslint": "^9.37.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.4.0",
+    "husky": "^9.1.7",
+    "jest": "^30.2.0",
+    "jest-environment-jsdom": "^30.2.0",
+    "jiti": "^2.6.1",
+    "lint-staged": "^16.2.4",
+    "prettier": "^3.6.2",
+    "react": "^19.2.0",
+    "release-it": "^19.0.5",
+    "ts-jest": "^29.4.5",
+    "tsup": "^8.5.0",
+    "typedoc": "^0.28.14",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.1"
+  }
+}

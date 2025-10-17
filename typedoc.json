@@ -1,0 +1,14 @@
+{
+  "entryPoints": ["src"],
+  "entryPointStrategy": "expand",
+  "out": "docs",
+  "readme": "none",
+  "tsconfig": "tsconfig.json",
+  "sort": ["source-order"],
+  "name": "React Hooks",
+  "gitRemote": "origin",
+  "gitRevision": "main",
+  "githubPages": true,
+  "projectDocuments": ["./CHANGELOG.md"],
+  "cname": "hooks.js.org"
+}
