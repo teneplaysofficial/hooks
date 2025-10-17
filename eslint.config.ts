@@ -3,6 +3,7 @@ import js from '@eslint/js';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 import pluginReact from 'eslint-plugin-react';
+import pluginReactHooks from 'eslint-plugin-react-hooks';
 import json from '@eslint/json';
 import markdown from '@eslint/markdown';
 import { defineConfig } from 'eslint/config';
@@ -17,6 +18,7 @@ export default defineConfig([
     plugins: {
       react: pluginReact,
       '@typescript-eslint': tseslint.plugin,
+      'react-hooks': pluginReactHooks,
     },
     languageOptions: {
       globals: { ...globals.browser, ...globals.node },
@@ -31,6 +33,7 @@ export default defineConfig([
       js.configs.recommended,
       ...tseslint.configs.recommended,
       pluginReact.configs.flat.recommended,
+      pluginReactHooks.configs.flat.recommended,
     ],
     settings: {
       react: {
