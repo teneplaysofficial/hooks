@@ -51,7 +51,7 @@
   },
   "scripts": {
     "prepare": "husky",
-    "test": "jest",
+    "test": "jest --coverage",
     "prebuild": "jiti scripts/gen-index.ts",
     "build": "tsup src/index.ts --format esm,cjs --dts --minify --clean",
     "pre-commit": "lint-staged",
