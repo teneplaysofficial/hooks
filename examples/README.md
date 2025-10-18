@@ -1,5 +1,7 @@
 ---
 title: Examples
+children:
+  - ./useCounter.md
 ---
 
 # React Hooks Examples
