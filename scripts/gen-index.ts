@@ -6,4 +6,5 @@ const files = globSync('./src/use*.ts', { exclude: [out, 'src/**/*.test.ts'] });
 const stream = createWriteStream(out, 'utf-8');
 
 files.forEach((f) => stream.write(`export * from './${basename(f, '.ts')}';`));
+stream.write('\n');
 stream.end();
