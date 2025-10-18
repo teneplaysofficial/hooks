@@ -105,3 +105,43 @@ it('should correctly update isMin and isMax flags', () => {
   act(() => result.current.increment());
   expect(result.current.isMax).toBe(true);
 });
+
+it('should respect boundaries when using setCountBounded with a number', () => {
+  const { result } = renderHook(() => useCounter({ min: 0, max: 10 }));
+
+  act(() => result.current.setCountBounded(15));
+  expect(result.current.count).toBe(10);
+
+  act(() => result.current.setCountBounded(-5));
+  expect(result.current.count).toBe(0);
+
+  act(() => result.current.setCountBounded(5));
+  expect(result.current.count).toBe(5);
+});
+
+it('should respect boundaries when using setCountBounded with an updater function', () => {
+  const { result } = renderHook(() => useCounter({ initialValue: 5, min: 0, max: 10 }));
+
+  act(() => result.current.setCountBounded((prev) => prev + 10));
+  expect(result.current.count).toBe(10);
+
+  act(() => result.current.setCountBounded((prev) => prev - 20));
+  expect(result.current.count).toBe(0);
+
+  act(() => result.current.setCountBounded((prev) => prev + 3));
+  expect(result.current.count).toBe(3);
+});
+
+it('should trigger onChange when setCountBounded changes count', () => {
+  const onChange = jest.fn();
+  const { result } = renderHook(() => useCounter({ min: 0, max: 5, onChange }));
+
+  act(() => result.current.setCountBounded(3));
+  expect(onChange).toHaveBeenCalledWith(3);
+
+  act(() => result.current.setCountBounded(7));
+  expect(onChange).toHaveBeenCalledWith(5);
+
+  act(() => result.current.setCountBounded(-2));
+  expect(onChange).toHaveBeenCalledWith(0);
+});

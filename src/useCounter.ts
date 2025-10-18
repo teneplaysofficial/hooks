@@ -44,7 +44,7 @@ export interface CounterReturn {
    */
   count: number;
   /**
-   * Set counter value directly, respects `min` and `max`
+   * Set counter value directly (does NOT respect `min` and `max`)
    */
   setCount: Dispatch<SetStateAction<number>>;
   /**
@@ -76,6 +76,13 @@ export interface CounterReturn {
    * Boolean indicating if the counter is at its maximum value
    */
   isMax: boolean;
+  /**
+   * Sets the counter value directly while enforcing `min` and `max` boundaries
+   *
+   * @description
+   * Accepts either a number or an updater function `(prev) => next`
+   */
+  setCountBounded: Dispatch<SetStateAction<number>>;
 }
 
 /**
@@ -141,6 +148,15 @@ export function useCounter({
     [clamp],
   );
 
+  const setCountBounded = useCallback(
+    (value: SetStateAction<number>) => {
+      setCount((prev) => {
+        return clamp(typeof value === 'function' ? value(prev) : value);
+      });
+    },
+    [clamp],
+  );
+
   useEffect(() => {
     onChange?.(count);
   }, [count, onChange]);
@@ -154,5 +170,6 @@ export function useCounter({
     isMax,
     isMin,
     resetTo,
+    setCountBounded,
   };
 }
