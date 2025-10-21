@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.0 (2025-10-21)
+
+### Features
+
+- add useDocumentTitle ([#2](https://github.com/teneplaysofficial/hooks/issues/2)) ([de6d0a9](https://github.com/teneplaysofficial/hooks/commit/de6d0a97b0a0ecc31efbd9cec4b8c295418ea898))
+
 ## 0.1.0 (2025-10-18)
 
 ### Features
