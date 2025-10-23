@@ -95,3 +95,9 @@ jobs:
           else
             echo "No changes detected, All generated files are up to date."
           fi
+
+  jsr-dry-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npx jsr publish --dry-run
