@@ -52,13 +52,15 @@
   "scripts": {
     "prepare": "husky",
     "test": "jest --coverage",
-    "prebuild": "jiti scripts/gen-index.ts",
+    "prebuild": "yarn gen:index && yarn update:jsr",
     "build": "tsup src/index.ts --format esm,cjs --dts --minify --clean",
     "pre-commit": "lint-staged",
     "fmt": "prettier --write",
     "fmt:check": "prettier --check .",
     "lint": "eslint",
     "lint:fix": "npx eslint --fix",
+    "gen:index": "jiti scripts/gen-index.ts",
+    "update:jsr": "jiti scripts/update-jsr.ts",
     "predocs": "jiti scripts/update-examples-readme.ts",
     "docs": "typedoc"
   },
