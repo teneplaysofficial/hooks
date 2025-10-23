@@ -3,6 +3,7 @@
   "entryPointStrategy": "expand",
   "out": "docs",
   "readme": "none",
+  "favicon": "assets/favicon.svg",
   "tsconfig": "tsconfig.json",
   "sort": ["source-order"],
   "name": "React Hooks",
