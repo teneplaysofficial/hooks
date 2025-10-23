@@ -5,6 +5,9 @@ on:
   push:
     branches: [main]
 
+permissions:
+  contents: read
+
 jobs:
   sheriff:
     runs-on: ubuntu-latest
@@ -95,3 +98,14 @@ jobs:
           else
             echo "No changes detected, All generated files are up to date."
           fi
+
+  jsr-dry-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: yarn
+      - run: yarn install --frozen-lockfile
+      - run: npx jsr publish --dry-run
