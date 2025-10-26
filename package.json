@@ -114,6 +114,9 @@
     ]
   },
   "release-it": {
+    "git": {
+      "requireCleanWorkingDir": false
+    },
     "npm": {
       "publishArgs": [
         "--provenance"
