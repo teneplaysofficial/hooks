@@ -1,5 +1,7 @@
 ---
 title: Examples
+children:
+  - ./useBoolean.md
 ---
 
 # React Hooks Examples
