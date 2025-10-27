@@ -52,7 +52,7 @@
   "scripts": {
     "prepare": "husky",
     "test": "jest --coverage",
-    "prebuild": "yarn gen:index && yarn update:jsr",
+    "prebuild": "yarn gen:index",
     "build": "tsup src/index.ts --format esm,cjs --dts --minify --clean",
     "pre-commit": "lint-staged",
     "fmt": "prettier --write",
@@ -131,6 +131,9 @@
         "preset": "conventionalcommits",
         "infile": "CHANGELOG.md"
       }
+    },
+    "hooks":{
+      "after:version:bump":"yarn update:jsr"
     }
   },
   "peerDependencies": {
