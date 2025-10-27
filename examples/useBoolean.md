@@ -1,4 +1,4 @@
-# `useBoolean`
+# useBoolean
 
 A simple and optimized React hook for managing boolean state with handy helpers like `toggle`, `setTrue`, `setFalse`, and `reset`.
 
