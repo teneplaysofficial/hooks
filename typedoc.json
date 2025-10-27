@@ -3,6 +3,11 @@
   "entryPointStrategy": "expand",
   "out": "docs",
   "readme": "none",
+  "navigationLinks": {
+    "Home": "https://teneplaysofficial.github.io/hooks",
+    "GitHub": "https://github.com/teneplaysofficial/hooks",
+    "NPM": "https://www.npmjs.com/package/@tenedev/hooks"
+  },
   "favicon": "assets/favicon.svg",
   "tsconfig": "tsconfig.json",
   "sort": ["source-order"],
