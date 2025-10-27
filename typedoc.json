@@ -16,6 +16,7 @@
   "gitRevision": "main",
   "githubPages": true,
   "projectDocuments": ["./CHANGELOG.md", "examples/README.md"],
+  "plugin": ["typedoc-github-theme"],
   "cname": "hooks.js.org",
   "exclude": ["src/index.ts", "**/*.test.ts"]
 }
