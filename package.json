@@ -30,6 +30,7 @@
     "state-management",
     "react-development"
   ],
+  "sideEffects": false,
   "files": [
     "dist"
   ],
@@ -132,8 +133,8 @@
         "infile": "CHANGELOG.md"
       }
     },
-    "hooks":{
-      "after:version:bump":"yarn update:jsr"
+    "hooks": {
+      "after:version:bump": "yarn update:jsr"
     }
   },
   "peerDependencies": {
