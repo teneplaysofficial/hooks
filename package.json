@@ -30,6 +30,7 @@
     "state-management",
     "react-development"
   ],
+  "sideEffects": false,
   "files": [
     "dist"
   ],
@@ -132,8 +133,8 @@
         "infile": "CHANGELOG.md"
       }
     },
-    "hooks":{
-      "after:version:bump":"yarn update:jsr"
+    "hooks": {
+      "after:version:bump": "yarn update:jsr"
     }
   },
   "peerDependencies": {
@@ -169,6 +170,7 @@
     "ts-jest": "^29.4.5",
     "tsup": "^8.5.0",
     "typedoc": "^0.28.14",
+    "typedoc-github-theme": "^0.3.1",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.1"
   }
