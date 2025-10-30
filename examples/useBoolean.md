@@ -172,4 +172,4 @@ function FetchButton() {
 
 ## Reference
 
-See [`useBoolean.test.ts`](../src/useBoolean.test.ts) for comprehensive unit tests covering
+See [`useBoolean.test.ts`](../src/useBoolean.test.ts) for comprehensive unit tests covering all hook behaviors, state transitions, and edge cases.
