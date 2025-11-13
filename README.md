@@ -8,6 +8,7 @@ _Reusable, lightweight, and type-safe hooks for modern React apps_
 [![codecov](https://codecov.io/gh/teneplaysofficial/hooks/graph/badge.svg?token=QtunRnFA3j)](https://github.com/teneplaysofficial/hooks)
 [![npm version](https://img.shields.io/npm/v/@tenedev/hooks?logo=npm&label=npm&color=49C41B)](https://www.npmjs.com/package/@tenedev/hooks)
 [![JSR](https://jsr.io/badges/@tene/hooks)](https://jsr.io/@tene/hooks)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fteneplaysofficial%2Fhooks.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fteneplaysofficial%2Fhooks?ref=badge_shield)
 
 </div>
 
@@ -47,3 +48,7 @@ deno add npm:@tenedev/hooks
 ## Documentation
 
 Refer to the [API documentation](https://teneplaysofficial.github.io/hooks) for a complete list of available types and their properties.
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fteneplaysofficial%2Fhooks.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fteneplaysofficial%2Fhooks?ref=badge_large)
