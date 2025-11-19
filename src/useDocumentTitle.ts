@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef } from 'react';
 
 /** Options to configure the behavior of {@link useDocumentTitle} */
-export interface UseDocumentTitleOptions {
+export interface DocumentTitleOptions {
   /**
    * Whether to restore the original document title when the component unmounts.
    *
@@ -64,7 +64,7 @@ export function useDocumentTitle(
   /** The new title to set */
   title: string,
   /** Optional configuration */
-  { restoreOnUnmount = true, template, skipIfSame = true }: UseDocumentTitleOptions = {},
+  { restoreOnUnmount = true, template, skipIfSame = true }: DocumentTitleOptions = {},
 ): void {
   const originalTitleRef = useRef(document.title || '');
   const restoreRef = useRef(restoreOnUnmount);
