@@ -1,2 +1,2 @@
 yarn pre-commit
-git add -A
+git add --update
