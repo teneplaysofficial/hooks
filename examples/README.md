@@ -2,6 +2,8 @@
 title: Examples
 children:
   - ./useBoolean.md
+  - ./useCounter.md
+  - ./useDocumentTitle.md
 ---
 
 # React Hooks Examples
