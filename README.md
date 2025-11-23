@@ -39,7 +39,7 @@ deno add npm:@tenedev/hooks
 - ⚛️ React 19+ Ready - optimized for the latest React version
 - 💡 Fully Typed - written entirely in TypeScript
 - 🧩 Composable APIs - simple, predictable, and flexible
-- 🚀 Cross-Runtime - works with Node, Deno, and JSR
+- 🚀 Cross-Runtime - works with Node, Deno, and Bun
 - 🧠 Tree-Shakable - only imports what you use
 - 🧪 100% Tested - reliable and safe for production
 - 🪶 Zero Dependencies - minimal and lightweight
