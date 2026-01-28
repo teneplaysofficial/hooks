@@ -4,6 +4,10 @@
 
 ## 0.2.1 (2025-10-26)
 
+### Features
+
+- add useBoolean ([#3](https://github.com/teneplaysofficial/hooks/issues/3)) ([064df64](https://github.com/teneplaysofficial/hooks/commit/064df64a8617d2bb72436aef95ea35c2dfdedc26))
+
 ## 0.2.0 (2025-10-21)
 
 ### Features
