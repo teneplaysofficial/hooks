@@ -2,6 +2,6 @@ minimum_pre_commit_version: '3.6.0'
 
 repos:
   - repo: https://github.com/rbubley/mirrors-prettier
-    rev: v3.7.4
+    rev: v3.8.1
     hooks:
       - id: prettier
