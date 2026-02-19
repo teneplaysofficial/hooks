@@ -43,7 +43,7 @@ export interface BooleanReturn {
  * );
  * ```
  *
- * @since 0.2.1
+ * @since 0.3.0
  */
 export function useBoolean(
   /**
