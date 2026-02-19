@@ -110,7 +110,7 @@
       }
     },
     "hooks": {
-      "after:version:bump": "yarn update:jsr"
+      "after:version:bump": "yarn update:jsr && git add jsr.json"
     }
   },
   "peerDependencies": {
