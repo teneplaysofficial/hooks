@@ -1,7 +1,8 @@
-import { act, renderHook } from '@testing-library/react-hooks';
+import { act, renderHook } from '@testing-library/react';
+import { expect, it, vi } from 'vitest';
 import { useCounter } from './useCounter';
 
-test('should return the initial count', () => {
+it('should return the initial count', () => {
   const { result } = renderHook(() => useCounter());
 
   expect(result.current.count).toBe(0);
@@ -46,7 +47,7 @@ it('should decrement and respect min', () => {
 });
 
 it('should call onChange when count changes', () => {
-  const onChange = jest.fn();
+  const onChange = vi.fn();
   const { result } = renderHook(() => useCounter({ onChange }));
 
   act(() => result.current.increment());
@@ -133,7 +134,7 @@ it('should respect boundaries when using setCountBounded with an updater functio
 });
 
 it('should trigger onChange when setCountBounded changes count', () => {
-  const onChange = jest.fn();
+  const onChange = vi.fn();
   const { result } = renderHook(() => useCounter({ min: 0, max: 5, onChange }));
 
   act(() => result.current.setCountBounded(3));

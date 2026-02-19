@@ -1,4 +1,5 @@
-import { act, renderHook } from '@testing-library/react-hooks';
+import { act, renderHook } from '@testing-library/react';
+import { expect, it } from 'vitest';
 import { useBoolean } from './useBoolean';
 
 it('should initialize with default value', () => {

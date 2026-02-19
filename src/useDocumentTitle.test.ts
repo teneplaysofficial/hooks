@@ -1,4 +1,5 @@
-import { renderHook } from '@testing-library/react-hooks';
+import { renderHook } from '@testing-library/react';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import { useDocumentTitle } from './useDocumentTitle';
 
 const originalTitle = document.title;
@@ -32,7 +33,7 @@ describe('skipIfSame', () => {
   it('skips updating if title is the same and skipIfSame is true', () => {
     let title = 'MyApp';
 
-    const setSpy = jest.fn((val: string) => {
+    const setSpy = vi.fn((val: string) => {
       title = val;
     });
 
@@ -50,7 +51,7 @@ describe('skipIfSame', () => {
   it('updates even if same when skipIfSame is false', () => {
     let title = 'MyApp';
 
-    const setSpy = jest.fn((val: string) => {
+    const setSpy = vi.fn((val: string) => {
       title = val;
     });
 
