@@ -1,5 +1,7 @@
 # Changelog
 
+## [0.3.2](https://github.com/teneplaysofficial/hooks/compare/0.3.1...0.3.2) (2026-03-02)
+
 ## [0.3.1](https://github.com/teneplaysofficial/hooks/compare/0.3.0...0.3.1) (2026-03-02)
 
 ### Bug Fixes
