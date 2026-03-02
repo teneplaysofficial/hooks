@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.1](https://github.com/teneplaysofficial/hooks/compare/0.3.0...0.3.1) (2026-03-02)
+
+### Bug Fixes
+
+- correct useBoolean [@since](https://github.com/since) annotation ([9177d81](https://github.com/teneplaysofficial/hooks/commit/9177d81f49d1d9e46090226c4e09bacf7f127dee))
+- remove node engine requirement and add react-dom peer dependency ([d7594fe](https://github.com/teneplaysofficial/hooks/commit/d7594fecd37f4a630a21d897b4b99c9e02e08abb))
+- stage jsr.json after version bump ([c324e73](https://github.com/teneplaysofficial/hooks/commit/c324e733eebf719aac7f269b8b049ad193d376bd))
+
 ## [0.3.0](https://github.com/teneplaysofficial/hooks/compare/0.2.0...0.3.0) (2026-02-19)
 
 ### Features
