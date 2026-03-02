@@ -68,9 +68,6 @@
     "predocs": "jiti scripts/update-examples-readme.ts",
     "docs": "typedoc"
   },
-  "engines": {
-    "node": ">=22"
-  },
   "lint-staged": {
     "examples/use*.md": "yarn predocs",
     "src/use*!(*.test).ts": "yarn prebuild",
@@ -114,7 +111,8 @@
     }
   },
   "peerDependencies": {
-    "react": "19.x"
+    "react": "19.x",
+    "react-dom": "19.x"
   },
   "devDependencies": {
     "@eslint/compat": "^2.0.0",
