@@ -1,7 +1,13 @@
 minimum_pre_commit_version: '3.6.0'
 
+ci:
+  autofix_commit_msg: 'chore: apply automatic fixes from pre-commit hooks'
+  autoupdate_commit_msg: 'chore: autoupdate hook versions'
+
 repos:
-  - repo: https://github.com/rbubley/mirrors-prettier
-    rev: v3.8.1
+  - repo: https://github.com/teneplaysofficial/pre-commit
+    rev: v1.0.0
     hooks:
       - id: prettier
+        additional_dependencies:
+          - '@tenedev/prettier-config@1.1.1'

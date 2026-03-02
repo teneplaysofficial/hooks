@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "target": "es2020",
+    "target": "es2024",
     "module": "esnext",
-    "moduleResolution": "node",
-    "lib": ["DOM", "ES2020"],
+    "moduleResolution": "bundler",
+    "lib": ["DOM", "ES2024"],
     "declaration": true,
     "declarationDir": "dist/types",
     "outDir": "dist",
@@ -16,6 +16,6 @@
     "isolatedModules": true,
     "types": ["node", "vitest"]
   },
-  "include": ["src/**/*"],
+  "include": ["src", "scripts"],
   "exclude": ["node_modules", "**/*.test.ts"]
 }
