@@ -6,7 +6,7 @@ ci:
 
 repos:
   - repo: https://github.com/teneplaysofficial/pre-commit
-    rev: v1.0.0
+    rev: v1.0.3
     hooks:
       - id: prettier
         additional_dependencies:
